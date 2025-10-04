@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опрос</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="survey">
+      <div class="container">
+        <div class="survey__title">Анкета</div>
+
+        <div class="survey__item">
+          <form action="/submit" method="post">
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+
+            <div class="survey__like">
+              <img
+                src="./like.png"
+                alt="Анкета пользователя"
+                class="survey__like-img"
+              />
+            </div>
+
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <fieldset>
+              <legend>Пол</legend>
+
+              <div class="radio-option">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+                />
+                <label for="male">Мужской</label>
+              </div>
+
+              <div class="radio-option">
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Женский</label>
+              </div>
+            </fieldset>
+
+            <label for="age">Возраст:</label>
+            <input type="number" name="age" id="age" />
+
+            <select name="city">
+              <option value="">Выберите город</option>
+              <optgroup label="Бурятия">
+                <option value="ulan-ude">Улан-Удэ</option>
+                <option value="kyahta">Кяхта</option>
+              </optgroup>
+              <optgroup label="Россия">
+                <option value="msk">Москва</option>
+                <option value="spb">Санкт-Петербург</option>
+              </optgroup>
+            </select>
+
+            
+
+            <div class="radio-option">
+              
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                value="yes"
+                required
+              />
+              <label for="agree">Я согласен с правилами *</label>
+            </div>
+
+            <button type="submit">Отправить</button>
+            <!-- <button type="reset">Очистить</button> -->
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

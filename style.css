@@ -1,0 +1,152 @@
+/* Подключи шрифт */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  padding: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #4361ee;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.survey__like {
+  position: absolute;
+  z-index: -1;
+  top: 150px;
+}
+.survey__like-img {
+  /* transform: translateX(460px) rotate(-20deg); */
+  width: 200px;
+  transition: transform 0.5s;
+}
+
+.survey__item {
+  position: relative;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 20px;
+  line-height: 1.5;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Фокус */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+}
+
+/* Обычные лейблы (для текстовых полей) */
+.survey__item label,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="checkbox"],
+select {
+  display: block;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+fieldset {
+  border: none;
+  margin: 24px 0;
+  font-size: 18px;
+}
+
+fieldset legend {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1e293b;
+  font-size: 18px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  transform: scale(1.5);
+  flex-shrink: 0;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.radio-option label {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Кнопка */
+button[type="submit"] {
+  background-color: #4361ee;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 24px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3a56d4;
+}
+
+/* для людей с эпилепсией и тд тп */
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar,
+  .survey__like-img {
+    transition: none;
+  }
+}
